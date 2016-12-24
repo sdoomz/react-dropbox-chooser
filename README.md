@@ -1,8 +1,8 @@
 React dropbox chooser
 ============
-Simple react wrapper for dropbox chooser API
+Simple react wrapper for [Dropbox Chooser API](https://www.dropbox.com/developers/chooser)
 
-Installation
+Installation 
 ============
 ```
 npm install
@@ -24,11 +24,8 @@ Usage
 </DropboxChooser>
 ```
 
-Dropbox Chooser API
-===================
-[api](https://www.dropbox.com/developers/chooser)
+
+### [How to create new app?](https://www.dropbox.com/developers/apps/create)
 
 
-Don't forget to register new app
-================================
-[create new app](https://www.dropbox.com/developers/apps/create)
+### Feel free to feel free
