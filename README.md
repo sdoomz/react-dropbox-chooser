@@ -1,4 +1,5 @@
->## React dropbox chooser
+React dropbox chooser
+============
 Simple react wrapper for dropbox chooser API
 
 Installation
