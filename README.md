@@ -5,11 +5,8 @@ Simple react wrapper for [Dropbox Chooser API](https://www.dropbox.com/developer
 Installation 
 ============
 ```
-npm install
-npm start
-open http://localhost:8080
+npm install react-dropbox-chooser
 ```
-
 
 Usage
 =====
@@ -24,8 +21,14 @@ Usage
 </DropboxChooser>
 ```
 
+Demo 
+====
+```
+npm install
+npm start
+open http://localhost:8080
+```
 
 ### [How to create new app?](https://www.dropbox.com/developers/apps/create)
-
 
 ### Feel free to feel free
