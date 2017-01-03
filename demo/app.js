@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="container">
       <DropboxChooser appKey={APP_KEY}
-                      success={files => console.log('choosed:', files)}
+                      success={files => console.log('chose:', files)}
                       cancel={() => console.log('closed')}
                       multiselect={true} >
         <span>Click me!</span>
