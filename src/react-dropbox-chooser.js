@@ -17,13 +17,15 @@ export default class DropboxChooser extends Component {
     cancel: React.PropTypes.func,
     linkType: React.PropTypes.oneOf([ 'preview', 'direct' ]),
     multiselect: React.PropTypes.bool,
-    extensions: React.PropTypes.arrayOf(React.PropTypes.string)
+    extensions: React.PropTypes.arrayOf(React.PropTypes.string),
+    disabled: React.PropTypes.bool
   };
 
   static defaultProps = {
     cancel: () => {},
     linkType: 'preview',
-    multiselect: false
+    multiselect: false,
+    disabled: false
   };
 
   constructor(props) {
@@ -49,7 +51,7 @@ export default class DropboxChooser extends Component {
   }
 
   onChoose() {
-    if (!this.isDropboxReady()) {
+    if (!this.isDropboxReady() || this.props.disabled) {
       return null;
     }
 
