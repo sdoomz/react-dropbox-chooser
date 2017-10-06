@@ -74,7 +74,7 @@ export default class DropboxChooser extends Component {
 
   render() {
     return (
-      <div onClick={this.onChoose}>
+      <div onClick={this.onChoose} disabled={this.props.disabled}>
         {
           this.props.children ?
               this.props.children :
