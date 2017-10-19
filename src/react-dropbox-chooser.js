@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import loadScript from 'load-script';
 
 const DROPBOX_SDK_URL = 'https://www.dropbox.com/static/api/2/dropins.js';
@@ -11,14 +12,14 @@ let scriptLoadingStarted = false;
 export default class DropboxChooser extends Component {
 
   static propTypes = {
-    children: React.PropTypes.node,
-    appKey: React.PropTypes.string.isRequired,
-    success: React.PropTypes.func.isRequired,
-    cancel: React.PropTypes.func,
-    linkType: React.PropTypes.oneOf([ 'preview', 'direct' ]),
-    multiselect: React.PropTypes.bool,
-    extensions: React.PropTypes.arrayOf(React.PropTypes.string),
-    disabled: React.PropTypes.bool
+    children: PropTypes.node,
+    appKey: PropTypes.string.isRequired,
+    success: PropTypes.func.isRequired,
+    cancel: PropTypes.func,
+    linkType: PropTypes.oneOf([ 'preview', 'direct' ]),
+    multiselect: PropTypes.bool,
+    extensions: PropTypes.arrayOf(PropTypes.string),
+    disabled: PropTypes.bool
   };
 
   static defaultProps = {
