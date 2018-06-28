@@ -19,7 +19,8 @@ export default class DropboxChooser extends Component {
     linkType: PropTypes.oneOf([ 'preview', 'direct' ]),
     multiselect: PropTypes.bool,
     extensions: PropTypes.arrayOf(PropTypes.string),
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool,
+    folderselect: PropTypes.bool
   };
 
   static defaultProps = {
@@ -61,7 +62,8 @@ export default class DropboxChooser extends Component {
       cancel,
       linkType,
       multiselect,
-      extensions
+      extensions,
+      folderselect
     } = this.props;
 
     window.Dropbox.choose({
@@ -69,7 +71,8 @@ export default class DropboxChooser extends Component {
       cancel,
       linkType,
       multiselect,
-      extensions
+      extensions,
+      folderselect
     });
   }
 
