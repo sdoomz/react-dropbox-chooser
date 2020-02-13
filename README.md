@@ -2,7 +2,7 @@ React dropbox chooser
 ============
 Simple react wrapper for [Dropbox Chooser API](https://www.dropbox.com/developers/chooser)
 
-Installation 
+Installation
 ============
 ```
 npm install react-dropbox-chooser
@@ -11,17 +11,18 @@ npm install react-dropbox-chooser
 Usage
 =====
 ```
-<DropboxChooser 
+<DropboxChooser
     appKey={'your-uniq-app-key'}
     success={files => this.onSuccess(files)}
     cancel={() => this.onCancel()}
     multiselect={true}
+    folderselect={true}
     extensions={['.mp4']} >
-    <div className="dropbox-button">Click me!</div>        
+    <div className="dropbox-button">Click me!</div>
 </DropboxChooser>
 ```
 
-Demo 
+Demo
 ====
 ```
 npm install

@@ -16,16 +16,18 @@ export default class DropboxChooser extends Component {
     appKey: PropTypes.string.isRequired,
     success: PropTypes.func.isRequired,
     cancel: PropTypes.func,
-    linkType: PropTypes.oneOf([ 'preview', 'direct' ]),
+    linkType: PropTypes.oneOf(['preview', 'direct']),
     multiselect: PropTypes.bool,
+    folderselect: PropTypes.bool,
     extensions: PropTypes.arrayOf(PropTypes.string),
     disabled: PropTypes.bool
   };
 
   static defaultProps = {
-    cancel: () => {},
+    cancel: () => { },
     linkType: 'preview',
     multiselect: false,
+    folderselect: false,
     disabled: false
   };
 
@@ -39,7 +41,7 @@ export default class DropboxChooser extends Component {
     if (!this.isDropboxReady() && !scriptLoadingStarted) {
       scriptLoadingStarted = true;
       loadScript(DROPBOX_SDK_URL, {
-        attrs : {
+        attrs: {
           id: SCRIPT_ID,
           'data-app-key': this.props.appKey
         }
@@ -61,6 +63,7 @@ export default class DropboxChooser extends Component {
       cancel,
       linkType,
       multiselect,
+      folderselect,
       extensions
     } = this.props;
 
@@ -69,6 +72,7 @@ export default class DropboxChooser extends Component {
       cancel,
       linkType,
       multiselect,
+      folderselect,
       extensions
     });
   }
@@ -78,8 +82,8 @@ export default class DropboxChooser extends Component {
       <div onClick={this.onChoose}>
         {
           this.props.children ?
-              this.props.children :
-              <button>Open dropbox chooser</button>
+            this.props.children :
+            <button>Open dropbox chooser</button>
         }
       </div>
     );
